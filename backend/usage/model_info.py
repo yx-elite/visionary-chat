@@ -38,7 +38,7 @@ def retrieve_model_info(base_url: str = AIGC_PRICING_ENDPOINT) -> Optional[Dict[
         logger.error(f"Request error occurred: {e}")
         return None
 
-def calculate_price(selected_model: str, input_token: int, output_token: int, **kwargs: Any) -> float:
+def calculate_model_pricing(selected_model: str, input_token: int, output_token: int, **kwargs: Any) -> float:
     """
     Calculate the price based on the selected model, input tokens, and output tokens.
 
@@ -75,7 +75,7 @@ def calculate_price(selected_model: str, input_token: int, output_token: int, **
 # Example Usage
 if __name__ == "__main__":
     data = retrieve_model_info()
-    pricing = calculate_price(
+    pricing = calculate_model_pricing(
         selected_model='gpt-3.5-turbo-instruct',
         input_token=1000,
         output_token=1000,
