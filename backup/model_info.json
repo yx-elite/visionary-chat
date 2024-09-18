@@ -1,0 +1,744 @@
+{
+  "data": [
+    {
+      "available": true,
+      "model_name": "gpt-4-turbo-2024-04-09",
+      "quota_type": 0,
+      "model_ratio": 5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "mj_high_variation",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "claude-3-5-sonnet-20240620",
+      "quota_type": 0,
+      "model_ratio": 6,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 5
+    },
+    {
+      "available": true,
+      "model_name": "o1-preview",
+      "quota_type": 0,
+      "model_ratio": 15,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 4
+    },
+    {
+      "available": true,
+      "model_name": "swap_face",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "mj_describe",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "mj_shorten",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "claude-3-opus-20240229",
+      "quota_type": 0,
+      "model_ratio": 30,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 5
+    },
+    {
+      "available": true,
+      "model_name": "gpt-3.5-turbo-instruct",
+      "quota_type": 0,
+      "model_ratio": 0.75,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1.3333333333333333
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4-0125-preview",
+      "quota_type": 0,
+      "model_ratio": 5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4o",
+      "quota_type": 0,
+      "model_ratio": 2.5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4o-2024-05-13",
+      "quota_type": 0,
+      "model_ratio": 2.5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "text-babbage-001",
+      "quota_type": 0,
+      "model_ratio": 0.25,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "tts-1-1106",
+      "quota_type": 0,
+      "model_ratio": 7.5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "chatgpt-4o-latest",
+      "quota_type": 0,
+      "model_ratio": 2.5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4o-all",
+      "quota_type": 0,
+      "model_ratio": 2.5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "mj_zoom",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "gpt-3.5-turbo",
+      "quota_type": 0,
+      "model_ratio": 0.25,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "mj_imagine",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "suno_lyrics",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.02,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "gpt-3.5-turbo-0613",
+      "quota_type": 0,
+      "model_ratio": 0.75,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1.3333333333333333
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4-1106-preview",
+      "quota_type": 0,
+      "model_ratio": 5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "mj-chat",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.1,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "text-embedding-3-small",
+      "quota_type": 0,
+      "model_ratio": 0.01,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "luma-video",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.22,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "o1-mini-2024-09-12",
+      "quota_type": 0,
+      "model_ratio": 3,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 4
+    },
+    {
+      "available": true,
+      "model_name": "mj_modal",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4",
+      "quota_type": 0,
+      "model_ratio": 15,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 2
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4o-2024-08-06",
+      "quota_type": 0,
+      "model_ratio": 1.25,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 4
+    },
+    {
+      "available": true,
+      "model_name": "whisper-1",
+      "quota_type": 0,
+      "model_ratio": 15,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "claude-3-sonnet-20240229",
+      "quota_type": 0,
+      "model_ratio": 6,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 5
+    },
+    {
+      "available": true,
+      "model_name": "deepseek-coder",
+      "quota_type": 0,
+      "model_ratio": 0.2,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 2
+    },
+    {
+      "available": true,
+      "model_name": "gemini-1.5-pro",
+      "quota_type": 0,
+      "model_ratio": 4,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "Meta-Llama-3.1-405B-Instruct",
+      "quota_type": 0,
+      "model_ratio": 0.75,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "suno-v3",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.26,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "davinci-002",
+      "quota_type": 0,
+      "model_ratio": 1,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "gpt-3.5-turbo-1106",
+      "quota_type": 0,
+      "model_ratio": 0.5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 2
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4-32k-0613",
+      "quota_type": 0,
+      "model_ratio": 30,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 2
+    },
+    {
+      "available": true,
+      "model_name": "mj_low_variation",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "gpt-3.5-turbo-0125",
+      "quota_type": 0,
+      "model_ratio": 0.25,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4o-mini",
+      "quota_type": 0,
+      "model_ratio": 0.075,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 4
+    },
+    {
+      "available": true,
+      "model_name": "text-embedding-3-large",
+      "quota_type": 0,
+      "model_ratio": 0.065,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "o1-preview-2024-09-12",
+      "quota_type": 0,
+      "model_ratio": 15,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 4
+    },
+    {
+      "available": true,
+      "model_name": "stable-diffusion",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.015,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "flux",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.023,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4-turbo-preview",
+      "quota_type": 0,
+      "model_ratio": 5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4-vision-preview",
+      "quota_type": 0,
+      "model_ratio": 5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "text-davinci-edit-001",
+      "quota_type": 0,
+      "model_ratio": 10,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "text-moderation-latest",
+      "quota_type": 0,
+      "model_ratio": 0.1,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "text-moderation-stable",
+      "quota_type": 0,
+      "model_ratio": 0.1,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "claude-3-haiku-20240307",
+      "quota_type": 0,
+      "model_ratio": 0.5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 5
+    },
+    {
+      "available": true,
+      "model_name": "deepseek-chat",
+      "quota_type": 0,
+      "model_ratio": 0.2,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 2
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4-all",
+      "quota_type": 0,
+      "model_ratio": 15,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 2
+    },
+    {
+      "available": true,
+      "model_name": "mj_custom_zoom",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "mj_inpaint",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "babbage-002",
+      "quota_type": 0,
+      "model_ratio": 0.2,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4-turbo",
+      "quota_type": 0,
+      "model_ratio": 5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "text-curie-001",
+      "quota_type": 0,
+      "model_ratio": 1,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "mj_blend",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "mj_upscale",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4-0613",
+      "quota_type": 0,
+      "model_ratio": 15,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 2
+    },
+    {
+      "available": true,
+      "model_name": "text-ada-001",
+      "quota_type": 0,
+      "model_ratio": 0.2,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "tts-1-hd",
+      "quota_type": 0,
+      "model_ratio": 15,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "tts-1-hd-1106",
+      "quota_type": 0,
+      "model_ratio": 15,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "gemini-1.5-pro-exp-0827",
+      "quota_type": 0,
+      "model_ratio": 4,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "gpt-3.5-turbo-16k",
+      "quota_type": 0,
+      "model_ratio": 1.5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1.3333333333333333
+    },
+    {
+      "available": true,
+      "model_name": "gemini-1.5-pro-exp-0801",
+      "quota_type": 0,
+      "model_ratio": 4,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "mj_pan",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "o1-mini",
+      "quota_type": 0,
+      "model_ratio": 3,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 4
+    },
+    {
+      "available": true,
+      "model_name": "gpt-3.5-turbo-16k-0613",
+      "quota_type": 0,
+      "model_ratio": 1.5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1.3333333333333333
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4-32k",
+      "quota_type": 0,
+      "model_ratio": 30,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 2
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4-gizmo-*",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.1,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "mj_reroll",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "mj_uploads",
+      "quota_type": 0,
+      "model_ratio": 30,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "mj_variation",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.058,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "stable-diffusion-3-2b",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.015,
+      "owner_by": "",
+      "completion_ratio": 0
+    },
+    {
+      "available": true,
+      "model_name": "dall-e-3",
+      "quota_type": 0,
+      "model_ratio": 20,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "quota_type": 0,
+      "model_ratio": 0.075,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 4
+    },
+    {
+      "available": true,
+      "model_name": "text-embedding-ada-002",
+      "quota_type": 0,
+      "model_ratio": 0.05,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "tts-1",
+      "quota_type": 0,
+      "model_ratio": 7.5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 1
+    },
+    {
+      "available": true,
+      "model_name": "gemini-1.5-flash",
+      "quota_type": 0,
+      "model_ratio": 1.5,
+      "model_price": 0,
+      "owner_by": "",
+      "completion_ratio": 3
+    },
+    {
+      "available": true,
+      "model_name": "suno_music",
+      "quota_type": 1,
+      "model_ratio": 0,
+      "model_price": 0.15,
+      "owner_by": "",
+      "completion_ratio": 0
+    }
+  ],
+  "group_ratio": 1,
+  "success": true
+}
