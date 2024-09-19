@@ -1,11 +1,17 @@
-import time
+import os, time
 import streamlit as st
 import pandas as pd
 from datetime import datetime
 from backend.usage import (
     retrieve_model_info, calculate_model_pricing, retrieve_key_usage_details
 )
+from utils import Logger
 
+
+# Initialize logging
+module_name = os.path.basename(__file__).split('.')[0]
+log = Logger(logger_name=module_name, log_level='info')
+logger = log.get_logger()
 
 st.header("API Usage")
 
@@ -108,73 +114,88 @@ with tab2_usage_tracker:
         with st.spinner("Token usage is being calculated..."):
             try:
                 subscription, key_usage, usage_logs = retrieve_key_usage_details(api_key=api_key)
-                total_limit = subscription.get('soft_limit_usd', 99999)
-                total_usage = key_usage.get('total_usage', 99999)
-                
-                # Check there is presence of errors
-                if total_limit != 99999 and total_usage != 99999:
-                    total_usage = total_usage / 100  # Conversion
-                    remainder = total_limit - total_usage
-                    tc_status_placeholder.success(
-                        "Token usage has been calculated successfully!", icon=':material/task_alt:'
-                    )
-                    
-                    usage_bar = tc_usage_placeholder.progress(
-                        remainder / total_limit,
-                        text=f"Current Usage: &nbsp;&nbsp;&nbsp;\\${remainder:.2f} / \\${total_limit:.2f}"
-                    )
-                    
-                    with tc_token_info_placeholder.container():
-                        with st.expander("API Key Information", expanded=True, icon=':material/expand_circle_down:'):
-                            key_status = 'Inctive' if total_limit == 0 else "Active"
-                            st.markdown(f"""
-                                > - *Total Limit :* `{total_limit:.3f}`
-                                > - *Total Usage :* `{total_usage:.3f}`
-                                > - *Status :* `{key_status}`
-                                > - *Expiration :* `None`
-                                ---
-                                ##### Remainding Quota : ${remainder:.3f}
-                                """)
-                    
-                    with tc_log_placeholder.container():
-                        with st.expander("Usage History", expanded=True, icon=':material/history:'):
-                            usage_log_details = usage_logs.get('data')
-                            
-                            # If there is any usage history
-                            if len(usage_log_details) >= 1:
-                                usage_log_df = pd.DataFrame([
-                                    {
-                                        "Created At": datetime.fromtimestamp(log['created_at']).strftime('%Y-%m-%d %H:%M:%S'),
-                                        "API Key": log['token_name'],
-                                        "Model": log['model_name'],
-                                        "Response Time": log['use_time'],
-                                        "Input Tokens": log['prompt_tokens'],
-                                        "Output Tokens": log['completion_tokens'],
-                                        "Total Costs": log['quota'] * 2e-6
-                                    }
-                                    for log in usage_log_details
-                                ])
-                                usage_log_df = usage_log_df.sort_values(by='Created At', ascending=False)
-                                pd.options.display.float_format = '{:.6f}'.format
-                            else:
-                                # If there is no usage history
-                                usage_log_df = pd.DataFrame(columns = ["Created At", "API Key", "Model", "Response Time", "Input Tokens", "Output Tokens", "Total Costs"])
-                            
-                            st.dataframe(
-                                usage_log_df, 
-                                use_container_width=True, 
-                                hide_index=True,
-                                column_config={
-                                    "Total Costs": st.column_config.NumberColumn(
-                                        format="$ %.6f"
-                                    )
-                                }
-                            )
-                else:
-                    tc_status_placeholder.error(
-                        "Error calculating token usage. Please contact the administrator to report this issue.", icon=':material/error:'
-                    )
+                st.session_state['subscription'] = subscription
+                st.session_state['key_usage'] = key_usage
+                st.session_state['usage_logs'] = usage_logs
+                st.session_state['tracker_error'] = None
             except:
-                tc_status_placeholder.error(
-                    "Unable to calculate token usage. Please verify that the API Key is entered correctly.", icon=':material/error:'
-                )
+                st.session_state['tracker_error'] = "Unable to calculate token usage. Please verify that the API Key is entered correctly."
+                logger.warning(st.session_state['tracker_error'])
+    
+    # Display the results from session state if available
+    if st.session_state['tracker_error']:
+        tc_status_placeholder.error(st.session_state['tracker_error'], icon=':material/error:')
+    
+    elif st.session_state['subscription'] and st.session_state['key_usage']:
+        subscription = st.session_state['subscription']
+        key_usage = st.session_state['key_usage']
+        usage_logs = st.session_state['usage_logs']
+        
+        total_limit = subscription.get('soft_limit_usd', 99999)
+        total_usage = key_usage.get('total_usage', 99999)
+        
+        # Check there is presence of errors
+        if total_limit != 99999 and total_usage != 99999:
+            total_usage = total_usage / 100  # Conversion
+            remainder = total_limit - total_usage
+            
+            logger.info("Token usage has been calculated successfully!")
+            tc_status_placeholder.success(
+                "Token usage has been calculated successfully!", icon=':material/task_alt:'
+            )
+            usage_bar = tc_usage_placeholder.progress(
+                remainder / total_limit,
+                text=f"Current Usage: &nbsp;&nbsp;&nbsp;\\${remainder:.2f} / \\${total_limit:.2f}"
+            )
+            
+            with tc_token_info_placeholder.container():
+                with st.expander("API Key Information", expanded=True, icon=':material/expand_circle_down:'):
+                    key_status = 'Inactive' if total_limit == 0 else "Active"
+                    st.markdown(f"""
+                        > - *Total Limit :* `{total_limit:.3f}`
+                        > - *Total Usage :* `{total_usage:.3f}`
+                        > - *Status :* `{key_status}`
+                        > - *Expiration :* `None`
+                        ---
+                        ##### Remainding Quota : ${remainder:.3f}
+                        """)
+            
+            with tc_log_placeholder.container():
+                with st.expander("Usage History", expanded=True, icon=':material/history:'):
+                    usage_log_details = usage_logs.get('data')
+                    
+                    # If there is any usage history
+                    if len(usage_log_details) >= 1:
+                        usage_log_df = pd.DataFrame([
+                            {
+                                "Created At": datetime.fromtimestamp(log['created_at']).strftime('%Y-%m-%d %H:%M:%S'),
+                                "API Key": log['token_name'],
+                                "Model": log['model_name'],
+                                "Response Time": log['use_time'],
+                                "Input Tokens": log['prompt_tokens'],
+                                "Output Tokens": log['completion_tokens'],
+                                "Total Costs": log['quota'] * 2e-6
+                            }
+                            for log in usage_log_details
+                        ])
+                        usage_log_df = usage_log_df.sort_values(by='Created At', ascending=False)
+                        pd.options.display.float_format = '{:.6f}'.format
+                    else:
+                        # If there is no usage history
+                        usage_log_df = pd.DataFrame(columns = ["Created At", "API Key", "Model", "Response Time", "Input Tokens", "Output Tokens", "Total Costs"])
+                    
+                    st.dataframe(
+                        usage_log_df, 
+                        use_container_width=True, 
+                        hide_index=True,
+                        column_config={
+                            "Total Costs": st.column_config.NumberColumn(
+                                format="$ %.6f"
+                            )
+                        }
+                    )
+        else:
+            st.session_state['tracker_error'] = "Error calculating token usage. Please contact the administrator to report this issue."
+            # Handle the tracker error on runtime
+            tc_status_placeholder.error(st.session_state['tracker_error'], icon=':material/error:')
+            logger.error(st.session_state['tracker_error'])
