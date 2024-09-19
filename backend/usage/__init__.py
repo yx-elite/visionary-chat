@@ -1,10 +1,13 @@
 import os
 from .model_info import retrieve_model_info, calculate_model_pricing
+from .usage import retrieve_key_usage_details
 from utils.logger import Logger
+
 
 __all__ = [
     'retrieve_model_info',
-    'calculate_model_pricing'
+    'calculate_model_pricing',
+    'retrieve_key_usage_details'
 ]
 
 # Get the package name based on the directory name
