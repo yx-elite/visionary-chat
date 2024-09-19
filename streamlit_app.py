@@ -1,5 +1,6 @@
 import streamlit as st
 from datetime import datetime
+from session_state import init_session_state
 
 
 # Setup app configurations
@@ -28,6 +29,8 @@ nav = st.navigation(
 @st.cache_data
 def fetch_modified_date():
     return datetime.now().strftime('%b %d, %Y')
+
+init_session_state()
 
 author = "[YX-ELITE](https://github.com/yx-elite)"
 dark_theme_logo = './static/langchain-logo-text-dark.png'

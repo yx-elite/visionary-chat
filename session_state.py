@@ -1,0 +1,14 @@
+import streamlit as st
+
+def init_session_state():
+    if 'subscription' not in st.session_state:
+        st.session_state['subscription'] = None
+    
+    if 'key_usage' not in st.session_state:
+        st.session_state['key_usage'] = None
+    
+    if 'usage_logs' not in st.session_state:
+        st.session_state['usage_logs'] = None
+    
+    if 'tracker_error' not in st.session_state:
+        st.session_state['tracker_error'] = None
