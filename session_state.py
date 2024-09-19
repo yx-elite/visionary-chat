@@ -1,6 +1,15 @@
 import streamlit as st
 
 def init_session_state():
+    # ------ Pricing Calculator ------
+    if 'pricing_history' not in st.session_state:
+        st.session_state['pricing_history'] = {}
+    
+    if 'pricing_error' not in st.session_state:
+        st.session_state['pricing_error'] = None
+    
+    
+    # ------ Usage Tracker ------
     if 'subscription' not in st.session_state:
         st.session_state['subscription'] = None
     

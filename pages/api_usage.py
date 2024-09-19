@@ -67,21 +67,43 @@ with tab1_pricing_calculator:
         time.sleep(0.5)
         try:
             usage_pricing = calculate_model_pricing(model_option, input_token, output_token, model_infos=model_infos)
-            pc_status_placeholder.success("Usage pricing has been calculated successfully!", icon=':material/task_alt:')
-            # disp_usage_pricing = math.ceil(usage_pricing*1e6) / 1e6
             
-            # Display calculated model pricing based on tokens
-            with pc_result_placeholder.container():
-                with st.expander("Computed Result", expanded=True, icon=':material/expand_circle_down:'):
-                    st.markdown(f"""
-                        > - *Model :* `{model_option}`
-                        > - *Input Tokens :* `{input_token}`
-                        > - *Output Tokens :* `{output_token}`
-                        ---
-                        ##### Usage Pricing : ${usage_pricing:.6f}
-                        """)
-        except Exception as e:
-            st.error("Error calculating usage pricing. Please contact the administrator to report this issue.", icon=':material/error:')
+            # Store pricing details in session state
+            st.session_state['pricing_history'] = {
+                'model_option': model_option,
+                'input_token': input_token,
+                'output_token': output_token,
+                'usage_pricing': usage_pricing
+            }
+            st.session_state['pricing_error'] = None
+        except:
+            st.session_state['pricing_error'] = "Error calculating usage pricing. Please contact the administrator to report this issue."
+            logger.error(st.session_state['pricing_error'])
+    
+    # Display the results from session state if available
+    if st.session_state['pricing_error']:
+        pc_status_placeholder.error(st.session_state['pricing_error'], icon=':material/error:')
+    
+    elif st.session_state['pricing_history']:
+        model_option = st.session_state.pricing_history['model_option']
+        input_token = st.session_state.pricing_history['input_token']
+        output_token = st.session_state.pricing_history['output_token']
+        usage_pricing = st.session_state.pricing_history['usage_pricing']
+        
+        pc_success_msg = "Usage pricing has been calculated successfully!"
+        logger.info(pc_success_msg)
+        pc_status_placeholder.success(pc_success_msg, icon=':material/task_alt:')
+        
+        # Display calculated model pricing based on tokens
+        with pc_result_placeholder.container():
+            with st.expander("Computed Result", expanded=True, icon=':material/expand_circle_down:'):
+                st.markdown(f"""
+                    > - *Model :* `{model_option}`
+                    > - *Input Tokens :* `{input_token}`
+                    > - *Output Tokens :* `{output_token}`
+                    ---
+                    ##### Usage Pricing : ${usage_pricing:.6f}
+                    """)
 
 
 # ------ Usage Tracker ------
@@ -114,6 +136,8 @@ with tab2_usage_tracker:
         with st.spinner("Token usage is being calculated..."):
             try:
                 subscription, key_usage, usage_logs = retrieve_key_usage_details(api_key=api_key)
+                
+                # Store information in session state
                 st.session_state['subscription'] = subscription
                 st.session_state['key_usage'] = key_usage
                 st.session_state['usage_logs'] = usage_logs
@@ -139,10 +163,9 @@ with tab2_usage_tracker:
             total_usage = total_usage / 100  # Conversion
             remainder = total_limit - total_usage
             
-            logger.info("Token usage has been calculated successfully!")
-            tc_status_placeholder.success(
-                "Token usage has been calculated successfully!", icon=':material/task_alt:'
-            )
+            tc_success_msg = "Token usage has been calculated successfully!"
+            logger.info(tc_success_msg)
+            tc_status_placeholder.success(tc_success_msg, icon=':material/task_alt:')
             usage_bar = tc_usage_placeholder.progress(
                 remainder / total_limit,
                 text=f"Current Usage: &nbsp;&nbsp;&nbsp;\\${remainder:.2f} / \\${total_limit:.2f}"
