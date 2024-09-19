@@ -11,7 +11,7 @@ st.header("API Usage")
 
 tab1_pricing_calculator, tab2_usage_tracker = st.tabs([
     "1\. 📊 - Pricing Calculator - ",
-    "2\. 📈 - Usage Tracker -"
+    "2\. 📈 - Usage Tracker - "
 ])
 
 # ------ Pricing Calculator ------
@@ -139,7 +139,6 @@ with tab2_usage_tracker:
                     with tc_log_placeholder.container():
                         with st.expander("Usage History", expanded=True, icon=':material/history:'):
                             usage_log_details = usage_logs.get('data')
-                            st.write(len(usage_log_details))
                             
                             # If there is any usage history
                             if len(usage_log_details) >= 1:
