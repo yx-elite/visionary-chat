@@ -126,7 +126,7 @@ with tab2_usage_tracker:
                     
                     with tc_token_info_placeholder.container():
                         with st.expander("API Key Information", expanded=True, icon=':material/expand_circle_down:'):
-                            key_status = 'Active' if total_limit == 0 else "Inactive"
+                            key_status = 'Inctive' if total_limit == 0 else "Active"
                             st.markdown(f"""
                                 > - *Total Limit :* `{total_limit:.3f}`
                                 > - *Total Usage :* `{total_usage:.3f}`
